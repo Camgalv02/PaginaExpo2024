@@ -1,0 +1,406 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Sección Héroe */
+#hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    background: url('/img/bannerescuela.jpg') no-repeat center center/cover;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#hero h1 {
+    position: relative;
+    font-size: 3rem;
+    margin: 0;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Sección Aprender */
+#aprender {
+    background-color: #4FA3B5;
+    padding-top: 20px;
+}
+
+.profile {
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: calc(45% - 40px);
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    min-height: 450px;
+}
+
+/* Responsividad: alineación de las tarjetas en mobile */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    .profile {
+        width: calc(100% - 40px);
+        margin: 10px auto; /* Centrar las tarjetas en mobile */
+    }
+
+    #aprender {
+        padding: 20px; /* Ajustar padding en pantallas pequeñas */
+    }
+}
+
+/* Estilos para las tarjetas */
+.card-habilidades {
+    background-color: #B7E0FF;
+    margin-left: 7%;
+}
+
+.card-caracteristicas {
+    background-color: #B7E0FF;
+}
+
+/* Estilo de los títulos */
+.profile h3 {
+    font-size: 1.5em;
+    color: #49454f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo de los ítems */
+.profile ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.profile li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Formato del texto */
+.profile li {
+    font-weight: 400;
+    text-align: left;
+    color: #333;
+}
+
+/* Aspecto más profesional para las tarjetas */
+.profile {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    text-align: center;
+    margin-top: 30px;   
+}
+
+/* Estilo de los títulos en las tarjetas */
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Estilo para los íconos de los títulos */
+.icon-left, .icon-right {
+    width: 40px;
+    margin: 0 10px;
+}
+
+.icon-left img, .icon-right img {
+    width: 100%;
+    height: auto;
+}
+
+/* Sección de Tecnologías */
+#technologies {
+    padding: 40px;
+    background-color: #5B9EB1;
+    text-align: center;
+    margin: 0;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tech-icons img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+/* Sección de Proyectos */
+#projects {
+    padding: 50px 20px;
+    background-color: #3A6D8C;
+    text-align: center;
+}
+
+#projects h2 {
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.project-item img {
+    width: 40%;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.project-info {
+    flex: 1;
+}
+
+/* Alternar la posición de la imagen para los elementos pares */
+.project-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-item:nth-child(even) img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* Sección de Testimonios */
+#testimonials {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1D4665 !important;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-card {
+    background-color: #2E2F2B;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 50px auto; /* Centrar tarjeta */
+    transition: transform 0.3s;
+    width: fit-content;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial-info h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.testimonial-info .description {
+    font-size: 0.9em;
+    color: #B0BEC5;
+}
+
+.testimonial-comment {
+    font-size: 1em;
+    margin: 15px 0;
+}
+
+.testimonial-footer .icon-insta img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #1D4665;
+    border-radius: 50%;
+}
+
+/* Call to Action */
+#cta {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #001F3F;
+    color: #FFFFFF;
+}
+
+#cta h2 {
+    font-size: 2.5rem;
+}
+
+/* Estilo base para el pie de página */
+#footer {
+    background-color: #000C1F;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Estilo base para los iconos sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-links img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1);
+}
+
+/* Efecto hover */
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Colores de hover para cada icono */
+.social-links img:nth-child(1):hover { /* Ubicación */
+    filter: brightness(1) hue-rotate(0deg);
+}
+
+.social-links img:nth-child(2):hover { /* Facebook */
+    filter: brightness(1) hue-rotate(210deg);
+}
+
+.social-links img:nth-child(3):hover { /* Instagram */
+    filter: brightness(1) hue-rotate(290deg);
+}
+
+.social-links img:nth-child(4):hover { /* GitHub */
+    filter: brightness(1) hue-rotate(240deg);
+}
+
+/* Estilo para el texto del pie de página */
+footer p {
+    margin: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    .project-carousel {
+        flex-direction: column;
+    }
+
+    #cta {
+        padding: 30px 10px; /* Ajustar padding en pantallas pequeñas */
+    }
+
+    .testimonial-card {
+        margin: 30px 20px; /* Ajustar margen en pantallas pequeñas */
+        width: calc(100% - 40px); /* Hacer tarjetas más anchas */
+    }
+
+    #aprender {
+        padding: 20px; /* Ajustar padding en pantallas pequeñas */
+    }
+
+    .profile {
+        width: calc(100% - 20px); /* Ajustar ancho para dispositivos más pequeños */
+        margin: 10px 0; /* Espaciado vertical entre tarjetas */
+    }
+
+    .project-item img {
+        width: 100%; /* Ajustar imagen al ancho completo */
+        margin-right: 0; /* Eliminar margen derecho */
+        margin-bottom: 10px; /* Añadir margen inferior */
+    }
+
+    .project-item {
+        flex-direction: column; /* Apilar elementos verticalmente */
+        align-items: center; /* Centrar contenido */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (ej. móviles) */
+@media (max-width: 480px) {
+    #projects h2 {
+        font-size: 1.5rem; /* Aumentar la reducción del tamaño del texto */
+    }
+
+    #footer {
+        padding: 20px; /* Reducir el padding del pie de página */
+    }
+
+    .testimonial-info h4 {
+        font-size: 1em; /* Reducir tamaño de texto del nombre */
+    }
+
+    .testimonial-comment {
+        font-size: 0.9em; /* Reducir tamaño del comentario */
+    }
+}
